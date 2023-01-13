@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+:root {
+  --linear-gradient: linear-gradient(90deg, #672280, #a626d3);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: whitesmoke;
+}
+.App {
+  width: 550px;
+  height: 650px;
+  background-color: white;
+  border-radius: 10px;
+}
+header {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  height: 65px;
+  padding: 10px;
   color: white;
+  background: var(--linear-gradient);
+  border-radius: 10px 10px 0 0;
 }
-
-.App-link {
-  color: #61dafb;
+.troll {
+  height: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 1.4rem;
+}
+.content {
+  padding: 40px;
+}
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+input {
+  width: 45%;
+  height: 40px;
+  border-radius: 7px;
+  border: 2px solid #d5d4d8;
+  font-size: 1.1rem;
+  padding: 0 5px;
+}
+button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: var(--linear-gradient);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 7px;
+}
+.memeImg {
+  max-height: 400px;
+  width: 100%;
+}
+.memeContainer {
+  margin-top: 20px;
+  position: relative;
+}
+.top,
+.bottom {
+  position: absolute;
+  left: 50%;
+  color: white;
+  font-size: 2rem;
+  transform: translate(-50%, 0);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+.top {
+  top: 10px;
+}
+.bottom {
+  bottom: 10px;
 }
